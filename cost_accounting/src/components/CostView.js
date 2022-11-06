@@ -1,5 +1,6 @@
 import './CostView.css'
 import CostItem from './CostItem'
+import Card from './Card'
 
 function CostView(props) {
   const costs = [
@@ -21,7 +22,7 @@ function CostView(props) {
   ]
 
   return (
-    <div className="costs">
+    <Card className="costs">
       <CostItem
         date={costs[0].date}
         description={costs[0].description}
@@ -37,7 +38,7 @@ function CostView(props) {
         description={costs[2].description}
         amount={costs[2].amount}
       />
-    </div>
+    </Card>
   )
 }
 
