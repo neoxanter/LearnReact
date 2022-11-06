@@ -22,7 +22,6 @@ function CostView(props) {
 
   return (
     <div className="costs">
-      <h1>React!</h1>
       <CostItem
         date={costs[0].date}
         description={costs[0].description}
