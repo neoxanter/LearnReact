@@ -1,4 +1,4 @@
-import CostView from './components/CostView'
+import CostView from './components/Costs/CostView'
 
 function App() {
   return (
