@@ -1,6 +1,6 @@
 import CostView from './components/Costs/CostView'
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>React!</h1>

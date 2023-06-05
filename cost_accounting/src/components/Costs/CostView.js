@@ -2,7 +2,7 @@ import './CostView.css'
 import CostItem from './CostItem'
 import Card from '../UI/Card'
 
-function CostView(props) {
+const CostView = (props) => {
   const costs = [
     {
       date: new Date(2022, 3, 11),
