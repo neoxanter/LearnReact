@@ -1,3 +1,4 @@
+import './CostForms.css'
 const CostForm = () => {
     return (
         <form>
@@ -13,6 +14,11 @@ const CostForm = () => {
                 <div className="new-cost__control">
                     <label>Date</label>
                     <input type="date" min='2020-01-01' step='2022-12-31' />
+                </div>
+                <div>
+                    <div className="new-cost__actions">
+                        <button type="submit">Add Expense</button>
+                    </div>
                 </div>
             </div>
         </form>
