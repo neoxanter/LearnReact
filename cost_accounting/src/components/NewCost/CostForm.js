@@ -1,7 +1,9 @@
 const CostForm = () => {
-  return (
-
-  )
+    return (
+        <div>
+            <form></form>
+        </div>
+    )
 }
 
 export default CostForm

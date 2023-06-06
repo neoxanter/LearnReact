@@ -1,6 +1,6 @@
 const NewCost = () => {
     return <div>
-        <form></form>
+
     </div>
 }
 
