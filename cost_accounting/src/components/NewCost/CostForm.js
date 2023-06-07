@@ -2,34 +2,47 @@ import React, {useState} from "react"
 import './CostForms.css'
 
 const CostForm = () => {
-    const [name, setName] = useState('')
-    const [amount, setAmount] = useState('')
-    const [date, setDate] = useState('')
+    const [inputName, setInputName] = useState('')
+    const [inputAmount, setInputAmount] = useState('')
+    const [inputDate, setInputDate] = useState('')
 
     const nameChangeHandler = (event) => {
-        setName(event.target.value)
+        setInputName(event.target.value)
     }
     const amountChangeHandler = (event) => {
-        setAmount(event.target.value)
+        setInputAmount(event.target.value)
     }
     const dateChangeHandler = (event) => {
-        setDate(event.target.value)
+        setInputDate(event.target.value)
+    }
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+
+        const costData = {
+            name: inputName,
+            amount: inputAmount,
+            date: new Date(inputDate)
+        }
+        setInputName('')
+        setInputAmount('')
+        setInputDate('')
     }
 
     return (
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>Name</label>
-                    <input type="text" onChange={nameChangeHandler}/>
+                    <input type="text" value={inputName} onChange={nameChangeHandler}/>
                 </div>
                 <div className="new-cost__control">
                     <label>Amount</label>
-                    <input type="number" onChange={amountChangeHandler} min='0.01' step='0.01'/>
+                    <input type="number" value={inputAmount} onChange={amountChangeHandler} min='0.01' step='0.01'/>
                 </div>
                 <div className="new-cost__control">
                     <label>Date</label>
-                    <input type="date" onChange={dateChangeHandler} min='2020-01-01' step='2022-12-31'/>
+                    <input type="date" value={inputDate} onChange={dateChangeHandler} min='2020-01-01' step='2022-12-31'/>
                 </div>
                 <div>
                     <div className="new-cost__actions">
