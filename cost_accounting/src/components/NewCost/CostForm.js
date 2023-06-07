@@ -1,11 +1,12 @@
 import './CostForms.css'
 const CostForm = () => {
+    const nameChangeHandler = () => {}
     return (
         <form>
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>Name</label>
-                    <input type="text" />
+                    <input type="text" onChange={nameChangeHandler}/>
                 </div>
                 <div className="new-cost__control">
                     <label>Amount</label>
