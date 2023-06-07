@@ -2,12 +2,17 @@ import NewCost from "./components/NewCost/NewCost";
 import CostView from './components/Costs/CostView'
 
 const App = () => {
-  return (
-    <div>
-      <NewCost />
-      <CostView />
-    </div>
-  )
+
+    const addCostHandler = (cost) => {
+
+    }
+
+    return (
+        <div>
+            <NewCost onAddCost={addCostHandler}/>
+            <CostView/>
+        </div>
+    )
 }
 
 export default App
