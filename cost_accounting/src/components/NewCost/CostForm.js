@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import './CostForms.css'
 
-const CostForm = () => {
+const CostForm = (props) => {
     const [inputName, setInputName] = useState('')
     const [inputAmount, setInputAmount] = useState('')
     const [inputDate, setInputDate] = useState('')
@@ -24,6 +24,8 @@ const CostForm = () => {
             amount: inputAmount,
             date: new Date(inputDate)
         }
+
+        props.onSaveCostData(costData)
         setInputName('')
         setInputAmount('')
         setInputDate('')
@@ -42,7 +44,8 @@ const CostForm = () => {
                 </div>
                 <div className="new-cost__control">
                     <label>Date</label>
-                    <input type="date" value={inputDate} onChange={dateChangeHandler} min='2020-01-01' step='2022-12-31'/>
+                    <input type="date" value={inputDate} onChange={dateChangeHandler} min='2020-01-01'
+                           step='2022-12-31'/>
                 </div>
                 <div>
                     <div className="new-cost__actions">
@@ -53,5 +56,4 @@ const CostForm = () => {
         </form>
     )
 }
-
 export default CostForm
