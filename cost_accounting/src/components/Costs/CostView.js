@@ -1,6 +1,7 @@
 import './CostView.css'
 import CostItem from './CostItem'
 import Card from '../UI/Card'
+import CostsFilter from "./CostsFilter";
 
 const CostView = (props) => {
     const costs = [

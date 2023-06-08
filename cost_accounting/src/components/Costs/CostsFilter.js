@@ -20,3 +20,5 @@ const CostsFilter = () => {
         </div>
     )
 }
+
+export default CostsFilter
