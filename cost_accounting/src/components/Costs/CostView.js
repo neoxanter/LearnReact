@@ -35,8 +35,8 @@ const CostView = (props) => {
 
     return (
         <div>
-            <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
             <Card className="costs">
+                <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
                 <CostItem
                     date={costs[0].date}
                     description={costs[0].description}
