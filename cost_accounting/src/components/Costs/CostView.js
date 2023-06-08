@@ -25,6 +25,8 @@ const CostView = (props) => {
     ]
 
     return (
+        <div>
+            <CostsFilter />
         <Card className="costs">
             <CostItem
                 date={costs[0].date}
@@ -42,6 +44,7 @@ const CostView = (props) => {
                 amount={costs[2].amount}
             />
         </Card>
+        </div>
     )
 }
 
