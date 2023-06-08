@@ -4,6 +4,11 @@ import Card from '../UI/Card'
 import CostsFilter from "./CostsFilter";
 
 const CostView = (props) => {
+
+    const yearChangeHandler = (year) => {
+
+    }
+
     const costs = [
         {
             id: 'c1',
@@ -27,24 +32,24 @@ const CostView = (props) => {
 
     return (
         <div>
-            <CostsFilter />
-        <Card className="costs">
-            <CostItem
-                date={costs[0].date}
-                description={costs[0].description}
-                amount={costs[0].amount}
-            />
-            <CostItem
-                date={costs[1].date}
-                description={costs[1].description}
-                amount={costs[1].amount}
-            />
-            <CostItem
-                date={costs[2].date}
-                description={costs[2].description}
-                amount={costs[2].amount}
-            />
-        </Card>
+            <CostsFilter onChangeYear={yearChangeHandler}/>
+            <Card className="costs">
+                <CostItem
+                    date={costs[0].date}
+                    description={costs[0].description}
+                    amount={costs[0].amount}
+                />
+                <CostItem
+                    date={costs[1].date}
+                    description={costs[1].description}
+                    amount={costs[1].amount}
+                />
+                <CostItem
+                    date={costs[2].date}
+                    description={costs[2].description}
+                    amount={costs[2].amount}
+                />
+            </Card>
         </div>
     )
 }
