@@ -2,11 +2,14 @@ import './CostView.css'
 import CostItem from './CostItem'
 import Card from '../UI/Card'
 import CostsFilter from "./CostsFilter";
+import React, {useState} from "react";
 
 const CostView = (props) => {
 
-    const yearChangeHandler = (year) => {
+    const [selectedYear, setSelectedYear] = useState('2020')
 
+    const yearChangeHandler = (year) => {
+        setSelectedYear(year)
     }
 
     const costs = [
