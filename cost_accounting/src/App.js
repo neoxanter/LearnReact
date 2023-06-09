@@ -26,7 +26,9 @@ const App = () => {
   const [costs, setCosts] = useState(INIT_COSTS)
 
   const addCostHandler = (cost) => {
-    setCosts([cost, ...costs])
+    setCosts(prevCosts => {
+      return [cost, ...prevCosts]
+    })
   }
 
   return (
