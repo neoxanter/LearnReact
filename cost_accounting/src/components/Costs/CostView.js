@@ -17,19 +17,19 @@ const CostView = (props) => {
             <Card className="costs">
                 <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler}/>
                 <CostItem
-                    date={costs[0].date}
-                    description={costs[0].description}
-                    amount={costs[0].amount}
+                    date={props.costs[0].date}
+                    description={props.costs[0].description}
+                    amount={props.costs[0].amount}
                 />
                 <CostItem
-                    date={costs[1].date}
-                    description={costs[1].description}
-                    amount={costs[1].amount}
+                    date={props.costs[1].date}
+                    description={props.costs[1].description}
+                    amount={props.costs[1].amount}
                 />
                 <CostItem
-                    date={costs[2].date}
-                    description={costs[2].description}
-                    amount={costs[2].amount}
+                    date={props.costs[2].date}
+                    description={props.costs[2].description}
+                    amount={props.costs[2].amount}
                 />
             </Card>
         </div>
