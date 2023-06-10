@@ -2,7 +2,9 @@ import CostItem from "./CostItem";
 
 const CostList = (props) => {
 
-  let costsContent = <p>No expenses this year</p>
+  if (props.costs.length === 0) {
+    return <h2>No expenses this year</h2>
+  }
 
   return <ul>
     props.costs.map((cost) => (
