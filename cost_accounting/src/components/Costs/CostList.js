@@ -7,14 +7,14 @@ const CostList = (props) => {
   }
 
   return <ul>
-    props.costs.map((cost) => (
+    {props.costs.map((cost) => (
     <CostItem
         key={cost.id}
         date={cost.date}
         description={cost.description}
         amount={cost.amount}
     />
-    ))
+    ))}
   </ul>
 }
 
