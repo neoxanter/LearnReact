@@ -22,7 +22,7 @@ const CostsDiagram = (props) => {
     diagramDataSets[costMonth].value += cost.amount
   }
 
-  return <Diagram/>
+  return <Diagram dataSets={diagramDataSets}/>
 }
 
 export default CostsDiagram
