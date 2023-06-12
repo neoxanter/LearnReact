@@ -5,6 +5,7 @@ const Diagram = (props) => {
       <div>
         {props.dataSets.map((dataSet) => (
             <DiagramBar
+                key={dataSet.label}
                 label={dataSet.label}
                 maxValue={null}
                 value={dataSet.value}/>
