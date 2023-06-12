@@ -1,4 +1,7 @@
 const DiagramBar = (props) => {
+
+  let barFillHeight = '0%'
+
   return (
       <div>
         <div>
