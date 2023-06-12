@@ -8,10 +8,9 @@ const DiagramBar = (props) => {
   return (
       <div>
         <div>
-          < div>
+          <div style={{'height: barFillHeight'}}>
 
-          < /div>
-
+          </div>
         </div>
         <div>
           {props.label}
